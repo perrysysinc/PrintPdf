@@ -62,6 +62,7 @@
 			if (printOptions.autoPrint){
 			
 				//Temp fix to force print to come up on auto print
+				//For some reason the load event is not happy being called at all times.
 				(function(self, printOptions){
 					setTimeout(function(){
 					console.log('print now');
@@ -132,6 +133,8 @@
 		if (printOptions.autoPrint){
 			printOptions.printParentElement.parentNode.removeChild(printOptions.printParentElement);
 		}
+		
+		$('.pdfPrinter-autoprint-container').remove();
 	}
 	
 	self.hidePrintable = function(printOptions){
