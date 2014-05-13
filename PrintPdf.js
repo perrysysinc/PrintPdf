@@ -60,6 +60,17 @@
 			
 			//if autoprint is enabled we will have to wait on the load event to call the print, after which we need to trigger a remove of the element
 			if (printOptions.autoPrint){
+			
+				//Temp fix to force print to come up on auto print
+				(function(self, printOptions){
+					setTimeout(function(){
+					console.log('print now');
+						printOptions.pdfDocument.contentWindow.print();
+						self.removePrintable(printOptions);
+				}, 1000)
+				})(self, printOptions);
+
+			
 				(function(self, printOptions){
 					$(printOptions.pdfDocument).on('load', function(){
 						if (printOptions.autoPrint){
