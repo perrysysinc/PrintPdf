@@ -1,0 +1,6 @@
+.pdfPrinter-toolbar{margin:0 auto;width:100%;}
+.pdfPrinter-printBtn{float:left;cursor:pointer;text-align:center;}
+.pdfPrinter-closePrintBtn{float:left;cursor:pointer;text-align:center;}
+.pdfPrinter-autoprint-container{width:1px;height:1px;position:fixed;top:-10px;left:-10px;overflow:hidden;}
+.pdfPrinter-container{width:100%;height:100%;}
+.pdfPrinter-container iframe{width:100%;height:100%;}
